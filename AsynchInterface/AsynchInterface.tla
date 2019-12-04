@@ -1,4 +1,6 @@
 ---- MODULE AsynchInterface ----
+EXTENDS Naturals
+
 CONSTANT Data
 VARIABLES val, rdy, ack
 
@@ -16,18 +18,18 @@ Init ==
 
 Send ==
   /\ ack = rdy
-  /\ \E data \in Data : val' = data
-  /\ rdy' = IF rdy = 0 THEN 1 ELSE 0
+  /\ val' \in Data
+  /\ rdy' = 1 - rdy
   /\ UNCHANGED ack
 
-Ack ==
+Rcv ==
   /\ ack /= rdy
-  /\ ack' = rdy
+  /\ ack' = 1 - ack
   /\ UNCHANGED <<val, rdy>>
 
 Next ==
   \/ Send
-  \/ Ack
+  \/ Rcv
 
 Spec == Init /\ [][Next]_vars
 ====
