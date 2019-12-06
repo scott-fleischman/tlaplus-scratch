@@ -11,3 +11,7 @@ Examples from the book [Specifying Systems](https://lamport.azurewebsites.net/tl
   * [InnerFIFO](InnerFIFO.tla)
   * [FIFO](FIFO.tla)
   * [BoundedFIFO](BoundedFIFO.tla)
+* Chapter 5.
+  * [MemoryInterface](MemoryInterface.tla)
+  * [InternalMemroy](InternalMemory.tla)
+  * [Memory](Memory.tla)
