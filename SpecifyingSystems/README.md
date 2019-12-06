@@ -15,3 +15,4 @@ Examples from the book [Specifying Systems](https://lamport.azurewebsites.net/tl
   * [MemoryInterface](MemoryInterface.tla)
   * [InternalMemroy](InternalMemory.tla)
   * [Memory](Memory.tla)
+  * [WriteThroughCache](WriteThroughCache.tla)
